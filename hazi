@@ -1,0 +1,144 @@
+{
+    "metadata": {
+        "kernelspec": {
+            "name": "SQL",
+            "display_name": "SQL",
+            "language": "sql"
+        },
+        "language_info": {
+            "name": "sql",
+            "version": ""
+        }
+    },
+    "nbformat_minor": 2,
+    "nbformat": 4,
+    "cells": [
+        {
+            "cell_type": "markdown",
+            "source": [
+                "1\\. Tantárgy eloszlásának vizsgálata"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "0fe18012-6379-41cf-b9d5-f1e27cc04683"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "SELECT t.Tantárgynév, COUNT(*) AS frequency\n",
+                "FROM orak o JOIN Tantárgyak t on o.targy=t.Tkód\n",
+                "GROUP BY t.Tantárgynév\n",
+                "ORDER BY frequency DESC"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "830d48d8-d1e9-4ca3-827f-477a968e66e9",
+                "language": "sql",
+                "tags": []
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(12 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.080"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 12,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Tantárgynév"
+                                    },
+                                    {
+                                        "name": "frequency"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Tantárgynév": "Az ürgeöntés alapjai",
+                                    "frequency": "675"
+                                },
+                                {
+                                    "Tantárgynév": "Az ürgeöntés hydrológiai alapjai II.",
+                                    "frequency": "250"
+                                },
+                                {
+                                    "Tantárgynév": "Az ürge anatómiája",
+                                    "frequency": "150"
+                                },
+                                {
+                                    "Tantárgynév": "Bevezetés az ürgeöntésbe",
+                                    "frequency": "100"
+                                },
+                                {
+                                    "Tantárgynév": "Fejezetek az ürgék jogaiból",
+                                    "frequency": "100"
+                                },
+                                {
+                                    "Tantárgynév": "Ürgeöntés az EU-ban",
+                                    "frequency": "100"
+                                },
+                                {
+                                    "Tantárgynév": "Az öntés elmélete",
+                                    "frequency": "75"
+                                },
+                                {
+                                    "Tantárgynév": "Az ürgeöntés hydrológiai alapjai I.",
+                                    "frequency": "75"
+                                },
+                                {
+                                    "Tantárgynév": "Öntési gyakorlat",
+                                    "frequency": "50"
+                                },
+                                {
+                                    "Tantárgynév": "Ürgevitel",
+                                    "frequency": "50"
+                                },
+                                {
+                                    "Tantárgynév": "ü-business",
+                                    "frequency": "25"
+                                },
+                                {
+                                    "Tantárgynév": "ürgefőzés",
+                                    "frequency": "25"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Tantárgynév</th><th>frequency</th></tr>",
+                            "<tr><td>Az ürgeöntés alapjai</td><td>675</td></tr>",
+                            "<tr><td>Az ürgeöntés hydrológiai alapjai II.</td><td>250</td></tr>",
+                            "<tr><td>Az ürge anatómiája</td><td>150</td></tr>",
+                            "<tr><td>Bevezetés az ürgeöntésbe</td><td>100</td></tr>",
+                            "<tr><td>Fejezetek az ürgék jogaiból</td><td>100</td></tr>",
+                            "<tr><td>Ürgeöntés az EU-ban</td><td>100</td></tr>",
+                            "<tr><td>Az öntés elmélete</td><td>75</td></tr>",
+                            "<tr><td>Az ürgeöntés hydrológiai alapjai I.</td><td>75</td></tr>",
+                            "<tr><td>Öntési gyakorlat</td><td>50</td></tr>",
+                            "<tr><td>Ürgevitel</td><td>50</td></tr>",
+                            "<tr><td>ü-business</td><td>25</td></tr>",
+                            "<tr><td>ürgefőzés</td><td>25</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 12
+        }
+    ]
+}
