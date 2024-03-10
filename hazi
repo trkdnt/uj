@@ -139,6 +139,65 @@
                 }
             ],
             "execution_count": 12
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "2\\. Duplikátorok"
+            ],
+            "metadata": {
+                "language": "sql",
+                "azdata_cell_guid": "d0817c4a-18fe-46fa-af9c-de2b8a4b8b82"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                ""
+            ],
+            "metadata": {
+                "azdata_cell_guid": "efb2d89b-bd3f-40bf-b679-26a00017a9be",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "error",
+                    "evalue": "Msg 8117, Level 16, State 1, Line 4\nOperand data type nvarchar is invalid for avg operator.",
+                    "ename": "",
+                    "traceback": []
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.061"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 13
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "3\\. Null érték"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "8ba57255-a6d0-4e9c-a54f-115c0d076647"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                ""
+            ],
+            "metadata": {
+                "azdata_cell_guid": "18907766-7120-4bed-b5ff-4557f09c9a9c",
+                "language": "sql"
+            },
+            "outputs": [],
+            "execution_count": null
         }
     ]
 }
